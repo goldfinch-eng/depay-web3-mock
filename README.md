@@ -6,7 +6,7 @@ Simplify testing your dApps by mocking blockchain providers and wallets with web
 yarn add depay-web3-mock
 ```
 
-or 
+or
 
 ```
 npm install --save depay-web3-mock
@@ -62,7 +62,7 @@ describe('something', ()=> {
   })
 
   it('mocks transactions', ()=>{
-    
+
     let mockedTransaction = mock({
       blockchain,
       transaction: {
@@ -86,7 +86,7 @@ describe('something', ()=> {
   })
 
   it('mocks contract transactions', ()=>{
-    
+
     let transactionMock = mock({
       blockchain,
       transaction: {
@@ -676,6 +676,40 @@ await global.ethereum.request({
 })
 ```
 
+### Watch Asset
+
+```javascript
+let walletWatchAssetMock = mock({
+  blockchain: 'ethereum',
+  watchAsset: {
+    params: {
+      type: 'ERC20',
+      options: {
+        address: '0xb0252f13850a4823706607524de0b146820F2240',
+        symbol: 'FOO',
+        decimals: 18,
+        image: 'https://foo.io/token-image.svg',
+      },
+    },
+    return: true
+  }
+})
+
+let success = await global.ethereum.request({
+  method: 'wallet_watchAsset',
+  params: {
+    type: 'ERC20',
+    options: {
+      address: '0xb0252f13850a4823706607524de0b146820F2240',
+      symbol: 'FOO',
+      decimals: 18,
+      image: 'https://foo.io/token-image.svg',
+    },
+  },
+})
+// true
+```
+
 #### Connect wallet to another wallet
 
 ```javascript
@@ -734,7 +768,7 @@ you can pass them explicitly to `web3-mock`:
 ```javascript
 
 let provider = new ethers.providers.JsonRpcProvider('https://example.com');
-    
+
 mock({
   provider,
   blockchain: 'ethereum'

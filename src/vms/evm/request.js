@@ -11,6 +11,7 @@ import { getCurrentBlock } from '../../block'
 import { getCurrentNetwork } from '../../network'
 import { switchNetwork, addNetwork } from './network'
 import { transaction } from './transaction'
+import { watchAsset } from './watchAsset'
 
 let request = ({ blockchain, request, provider }) => {
 
@@ -77,6 +78,10 @@ let request = ({ blockchain, request, provider }) => {
 
     case 'wallet_addEthereumChain':
       return addNetwork({ blockchain, params: request.params[0], provider })
+      break
+
+    case 'wallet_watchAsset':
+      return watchAsset({ blockchain, params: request.params[0], provider })
       break
 
     default:
