@@ -882,7 +882,7 @@ let request = ({ blockchain, request, provider }) => {
       return addNetwork({ blockchain, params: request.params[0], provider })
 
     case 'wallet_watchAsset':
-      return watchAsset({ blockchain, params: request.params[0], provider })
+      return watchAsset({ blockchain, params: request.params, provider })
 
     default:
       raise$1('Web3Mock request: Unknown request method ' + request.method + '!');

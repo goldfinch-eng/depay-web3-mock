@@ -81,7 +81,7 @@ let request = ({ blockchain, request, provider }) => {
       break
 
     case 'wallet_watchAsset':
-      return watchAsset({ blockchain, params: request.params[0], provider })
+      return watchAsset({ blockchain, params: request.params, provider })
       break
 
     default:
