@@ -5,7 +5,7 @@ import mock from './mock'
 import normalize from './normalize'
 import trigger from './trigger'
 import { anything } from './anything'
-import { increaseBlock, getCurrentBlock, resetCurrentBlock } from './block'
+import { increaseBlock, getCurrentBlock, resetCurrentBlock, setBlockData } from './block'
 import { resetMocks } from './mocks'
 import { setCurrentNetwork as connect } from './network'
 
@@ -18,6 +18,7 @@ export {
   increaseBlock,
   getCurrentBlock,
   resetCurrentBlock,
+  setBlockData,
   anything,
   normalize,
   replace,
