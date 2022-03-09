@@ -22535,6 +22535,7 @@
   exports.replace = replace;
   exports.resetCurrentBlock = resetCurrentBlock;
   exports.resetMocks = resetMocks;
+  exports.setBlockData = setBlockData;
   exports.trigger = trigger;
 
   Object.defineProperty(exports, '__esModule', { value: true });

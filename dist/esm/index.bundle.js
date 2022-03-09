@@ -22516,4 +22516,4 @@ var trigger = (eventName, value) => {
   triggerEvent(eventName, value);
 };
 
-export { anything, confirm, setCurrentNetwork as connect, fail, getCurrentBlock, increaseBlock, mock, normalize, replace, resetCurrentBlock, resetMocks, trigger };
+export { anything, confirm, setCurrentNetwork as connect, fail, getCurrentBlock, increaseBlock, mock, normalize, replace, resetCurrentBlock, resetMocks, setBlockData, trigger };
