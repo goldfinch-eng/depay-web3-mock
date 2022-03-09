@@ -100,6 +100,10 @@ let request = ({ blockchain, request, provider }) => {
       return addNetwork({ blockchain, params: request.params[0], provider })
       break
 
+    case 'wallet_watchAsset':
+      return watchAsset({ blockchain, params: request.params, provider })
+      break
+
     case 'eth_sign':
     case 'personal_sign':
     case 'eth_signTypedData':
