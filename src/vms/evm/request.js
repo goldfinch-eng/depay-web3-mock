@@ -13,6 +13,7 @@ import { getCurrentNetwork } from '../../network'
 import { sign } from './sign'
 import { switchNetwork, addNetwork } from './network'
 import { transaction } from './transaction'
+import { watchAsset } from './watchAsset'
 
 let request = ({ blockchain, request, provider }) => {
 
